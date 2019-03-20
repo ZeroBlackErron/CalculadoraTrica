@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Calculadora del Trica</string>
+    <string name="calculadora_spinner">Sistema de Evaluación</string>
+    <string name="calculadora_tipo_Teo">Prácticas Teóricas</string>
+    <string name="calculadora_tipo_Lab">Prácticas Laboratorios</string>
+    <string name="calculadora_promedio">Prom:</string>
+    <string name="calculadora_practicaTeo1">Práctica 1</string>
+    <string name="calculadora_practicaTeo2">Práctica 2</string>
+    <string name="calculadora_practicaLab1">Práctica 1</string>
+    <string name="calculadora_practicaLab2">Práctica 2</string>
+    <string name="calculardora_btn_calcular">CALCULAR</string>
+    <string name="calculadora_practicaLab3">Práctica 3</string>
+    <string name="calculadora_practicaLab4">Práctica 4</string>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <string-array name="calculadora_tipo_evaluacion">
+        <item>A: 30% T + 70% L</item>
+        <item>B: 50% T + 50% L</item>
+        <item>B: 40% T + 60% L</item>
+    </string-array>
+
+</resources>
