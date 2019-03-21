@@ -43,18 +43,18 @@ public class CaluladoraTricaActivity extends AppCompatActivity {
         int tipo = spinnerTipoEv.getSelectedItemPosition();
 
         try {
-            teo1 = Integer.parseInt(editTextTeo1.getText().toString());
-            teo2 = Integer.parseInt(editTextTeo2.getText().toString());
+            teo1 = Double.parseDouble(editTextTeo1.getText().toString());
+            teo2 = Double.parseDouble(editTextTeo2.getText().toString());
 
         }catch (Exception e) {
             Toast.makeText(this, "Falta agregar notas de teoría.", Toast.LENGTH_SHORT).show();
         }
 
         try {
-            lab1 = Integer.parseInt(editTextLab1.getText().toString());
-            lab2 = Integer.parseInt(editTextLab2.getText().toString());
-            lab3 = Integer.parseInt(editTextLab3.getText().toString());
-            lab4 = Integer.parseInt(editTextLab4.getText().toString());
+            lab1 = Double.parseDouble(editTextLab1.getText().toString());
+            lab2 = Double.parseDouble(editTextLab2.getText().toString());
+            lab3 = Double.parseDouble(editTextLab3.getText().toString());
+            lab4 = Double.parseDouble(editTextLab4.getText().toString());
         }catch (Exception e) {
             Toast.makeText(this, "Faltan notas de laboratorio", Toast.LENGTH_SHORT).show();
         }
@@ -74,10 +74,10 @@ public class CaluladoraTricaActivity extends AppCompatActivity {
         }
         String condicion = promF >=13 ? "Aprobado" : "Desaprobado";
 
-        textViewPromedioT.setText(String.valueOf(promT));
-        textViewPromedioL.setText(String.valueOf(promL));
+        textViewPromedioT.setText(String.valueOf(String.format("%.2f",promT)));
+        textViewPromedioL.setText(String.valueOf(String.format("%.2f",promL)));
         if (promF != 0) {
-            textViewPromedioF.setText("Promedio: " + String.valueOf(promF));
+            textViewPromedioF.setText("Promedio: " + String.valueOf(String.format("%.2f",promF)));
             textViewCondicion.setText(condicion);
         }
     }
