@@ -37,9 +37,9 @@ public class CaluladoraTricaActivity extends AppCompatActivity {
     }
 
     public void calcularTotal(View view) {
-        int teo1 = 0, teo2 = 0;
-        int lab1 = 0, lab2 = 0, lab3 = 0, lab4 = 0;
-        int promT, promL, promF = 0;
+        double teo1 = 0, teo2 = 0;
+        double lab1 = 0, lab2 = 0, lab3 = 0, lab4 = 0;
+        double promT, promL, promF = 0;
         int tipo = spinnerTipoEv.getSelectedItemPosition();
 
         try {
@@ -64,20 +64,20 @@ public class CaluladoraTricaActivity extends AppCompatActivity {
 
         switch (tipo) {
             case 0:
-                promF = (int) (promT * 0.3 + promL * 0.7);
+                promF = promT * 0.3 + promL * 0.7;
                 break;
             case 1:
-                promF = (int) (promT * 0.5 + promL * 0.5);
+                promF = promT * 0.5 + promL * 0.5;
                 break;
             case 2:
-                promF = (int) (promT * 0.4 + promL * 0.6);
+                promF = promT * 0.4 + promL * 0.6;
         }
         String condicion = promF >=13 ? "Aprobado" : "Desaprobado";
 
         textViewPromedioT.setText(String.valueOf(promT));
         textViewPromedioL.setText(String.valueOf(promL));
         if (promF != 0) {
-            textViewPromedioF.setText("Promedio: " + promF);
+            textViewPromedioF.setText("Promedio: " + String.valueOf(promF));
             textViewCondicion.setText(condicion);
         }
     }
